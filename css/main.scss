@@ -3,14 +3,181 @@
 
 @charset "UTF-8";
 
+// NASA-inspired dark theme color palette
+$nasa-dark-blue: #0B1426;     // Deep space blue
+$nasa-midnight: #1A1F2E;      // Midnight blue
+$nasa-steel: #2E3440;         // Steel gray
+$nasa-ice: #88C0D0;           // Ice blue
+$nasa-aurora: #81A1C1;        // Aurora blue
+$nasa-frost: #D8DEE9;         // Frost white
+$nasa-snow: #ECEFF4;          // Snow white
+$nasa-orange: #D08770;        // Mars orange
+$nasa-red: #BF616A;           // Alert red
+$nasa-yellow: #EBCB8B;        // Solar yellow
+
+// Override Materialize colors for dark theme
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: $nasa-dark-blue;
+  color: $nasa-frost;
 }
 
 main {
   flex: 1 0 auto;
+}
+
+// Dark theme overrides
+.navbar-fixed nav,
+nav {
+  background-color: $nasa-midnight !important;
+  
+  .nav-wrapper {
+    background-color: $nasa-midnight;
+  }
+  
+  a {
+    color: $nasa-ice !important;
+    
+    &:hover {
+      color: $nasa-aurora !important;
+    }
+  }
+  
+  .brand-logo {
+    color: $nasa-snow !important;
+  }
+}
+
+// Card styling
+.card {
+  background-color: $nasa-steel !important;
+  color: $nasa-frost !important;
+  
+  .card-title {
+    color: $nasa-snow !important;
+  }
+  
+  .card-content {
+    color: $nasa-frost !important;
+    
+    p {
+      color: $nasa-frost;
+    }
+  }
+  
+  .card-action {
+    background-color: $nasa-midnight;
+    border-top: 1px solid $nasa-dark-blue;
+    
+    a {
+      color: $nasa-ice !important;
+      
+      &:hover {
+        color: $nasa-aurora !important;
+      }
+    }
+  }
+}
+
+// Links
+a {
+  color: $nasa-ice;
+  
+  &:hover {
+    color: $nasa-aurora;
+  }
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+  color: $nasa-snow;
+}
+
+// Footer
+.page-footer {
+  background-color: $nasa-midnight !important;
+  color: $nasa-frost !important;
+  
+  .footer-copyright {
+    background-color: $nasa-dark-blue !important;
+  }
+}
+
+// Buttons
+.btn, .btn-large {
+  background-color: $nasa-ice !important;
+  color: $nasa-dark-blue !important;
+  
+  &:hover {
+    background-color: $nasa-aurora !important;
+  }
+}
+
+// Collections (for lists)
+.collection {
+  background-color: $nasa-steel;
+  border: 1px solid $nasa-midnight;
+  
+  .collection-item {
+    background-color: $nasa-steel;
+    color: $nasa-frost;
+    border-bottom: 1px solid $nasa-midnight;
+    
+    &:hover {
+      background-color: $nasa-midnight;
+    }
+    
+    a {
+      color: $nasa-ice;
+      
+      &:hover {
+        color: $nasa-aurora;
+      }
+    }
+  }
+}
+
+// Pagination
+.pagination {
+  li {
+    &.active {
+      background-color: $nasa-ice !important;
+      
+      a {
+        color: $nasa-dark-blue !important;
+      }
+    }
+    
+    a {
+      color: $nasa-ice !important;
+      
+      &:hover {
+        background-color: $nasa-midnight !important;
+        color: $nasa-aurora !important;
+      }
+    }
+  }
+}
+
+// Form inputs
+input, textarea {
+  color: $nasa-frost !important;
+  border-bottom: 1px solid $nasa-ice !important;
+  
+  &:focus {
+    border-bottom: 2px solid $nasa-aurora !important;
+    box-shadow: 0 1px 0 0 $nasa-aurora !important;
+  }
+}
+
+label {
+  color: $nasa-ice !important;
+  
+  &.active {
+    color: $nasa-aurora !important;
+  }
 }
 
 .card.medium {
