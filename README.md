@@ -1,79 +1,53 @@
-# Wall-E
+# Jekyll-Avalon
+[Demo](http://joshuaavalon.github.io/Jekyll-Avalon)
+![](https://raw.githubusercontent.com/joshuaavalon/Jekyll-Avalon/master/_screenshot/001.png)
 
-Wall-E is a modern Jekyll template with a magazine-like grid layout on the frontpage, beautiful typography and uncomplicated content. 
+## About
+Jekyll-Avalon is a [Materialize](https://github.com/dogfalo/materialize) Jekyll theme.
 
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
+Featuring:
+* Material Design
+* Responsive Web Design
+* Tags and categories browsing
+* Lazy loading images
 
-## Demo
-[wall-e-jekyll.github.io/](https://wall-e-jekyll.github.io/)
+## Installation
+This theme **CANNOT** be built by GitHub. You have to build it yourself.
+Please follows the following question.
 
-## Contents
+1. Are you willing to do extra works other than just blogging?
 
-- [Features](#features)
-- [Usage](#usage)
-- [Customization](#customization)
-- [Screenshots](#screenshots-desktop)
-    - [Desktop](#screenshots-desktop)
-    - [Mobile](#screenshots-mobile)
-- [Credits](#credits)
-- [License](#license)
+ Yes > 3
+ 
+ No > 2
 
-## Features
+2. Are you willing to other git service like GitLab?
 
-- Mobile responsive, built with Semantic UI, customization is easy
-- Disqus is integrated by default
-- One column layout suitable for personal blogs with focus on content
-- Beautiful typography (uses League Gothic and Open Sans)
-- Feature image can be added to homescreen post cards
-- Search box links to Google search by default
+ Yes > Upload this repository to GitLab. It will auto-deploy like GitHub. Make sure you have turn on the GitLab Runner.
+ 
+ No > This theme is not for you.
 
-## Usage
+3. Install Ruby if you don't have it. In you are using Windows, you may want to try [Ruby Installer](http://rubyinstaller.org/).
 
-Wall-E is fully furnished right out of the box. To use this template on your blog
-- If this is your first Jekyll blog, follow this <a href="https://jekyllrb.com/docs/installation/">helpful guide</a> to set up Jekyll.
-- Fork this repository, rename the fork as `your-username.github.io`. Your blog should immediately be live on `https://your-username.github.io`
-- Clone your fork
-- Delete everything in `_posts` directory. Delete the `tmp` directory.
-- Open `_config.yml` and set the variables
-- Open `_includes/disqus.html` and `_includes/disqus-count.html` and replace the value of `disqus_shortname` variable to your Disqus username
-- Run `jekyll serve` and your blog should be live on `http://localhost:4000`. Make changes, test them locally, commit your changes and push to your fork. Your changes should be live in a couple of seconds
+4. Install Jekyll and Bundler if you don't have it. Run the following commands in command prompt to install the packages.
+ ```
+ gem install jekyll bundler
+ ```
 
-## Customization
-- `_includes/author.html`: Add your name, link to a profile picture and a short author description that appears on the bottom of each post. See <a href="https://semantic-ui.com/views/item.html">Semantic Link</a> docs.
-- `_includes/card.html`: Cards can be customized to show the essential info about a post (feature image, catagory, tags, comment count etc). See <a href="https://semantic-ui.com/views/card.html">Semantic Card</a> docs.
-- `_includes/header.html`: Replace the site logo here. Add/replace frequently visited pages and/or social links here.
-- `_includes/footer.html`: Add your copyrights, if any, here. Also link to the less frequently visited pages and/or social links here.
-- `assets/css/main.css` and `assets/css/mobile.css`: Global and mobile specific CSS files respectively
-- `assets/js/main.js`: Any common javascript goes here. If you wish to customize the search behaviour (for example, use a different search engine), that can be done here.
+5. cd to your repository directory. Run the following command in command prompt to build.
+ ```
+ bundle exec jekyll serve
+ ```
+6. Upload the content in `_site` to GitHub or your host.
 
-## Screenshots (Desktop)
+## Config
+Change everything you need in `_config.yml`. Change the footer in `_includes/footer.html`.
 
-### Homepage
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
+If you want to change the color, go [here](https://github.com/dogfalo/materialize) to download SASS version 
+and replace the link in `_includes/head.html`.
 
-### Sample post
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop-post.png?raw=true">
+For comment support, you can use [Disqus](https://disqus.com/) and add the embed code to `_layouts/post.html`.
+Same for Google Analytics, add the embed code to `_includes/script.html`.
 
-## Screenshots (Mobile)
-
-### Homepage (Portrait)
-<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile.png?raw=true">
-
-### Homepage (Landscape)
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape.png?raw=true">
-
-### Sample post (Portrait)
-<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-post.png?raw=true">
-
-### Footer (Landscape)
-<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape-footer.png?raw=true">
-
-
-## Credits
-- <a href="https://demo.ghost.io">Ghost</a> blogging platform's demo page for inspiration (and the header background image).
-- <a href="http://www.jeanchristophebonis.com/">For the Wall-E image used everywhere</a>
-- <a href="https://semantic-ui.com">Semantic UI</a>
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md) <3
+## Post
+All the usable fields available are in `2016-10-27-welcome-to-jekyll.markdown`.
