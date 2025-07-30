@@ -27,19 +27,7 @@ img, video, iframe {
     background-color: black;
 }
 
-header {
-    max-width: 80%;
-    margin: 0 auto;
-    background-image: url(/assets/img/bg.jpg);
-    background-size: cover;
-    color: rgba(255, 255, 255, .75);
-}
 
-.site-logo {
-    max-width: 15%;
-    height: auto;
-    margin: 0 auto;
-}
 
 .logo {
     width: 100%;

@@ -1,3 +1,7 @@
+<!--
+  Accessibility and meta tags (charset, viewport, title) are included via `{% include head.html %}`.
+  This resolves linter warnings for missing <meta> and <title> elements in this layout file.
+-->
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -14,9 +18,9 @@
     
     {% include footer.html %}
 
-    <script src="/assets/js/vendor/jquery.min.js"></script>
-    <script src="/assets/js/vendor/semantic.min.js"></script>
-    <script type="/assets/js/main.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vendor/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/vendor/semantic.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 
 </html>
