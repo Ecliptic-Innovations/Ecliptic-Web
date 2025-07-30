@@ -8,3 +8,5 @@ baseurl: "/Ecliptic-Web"
 plugins:
   - jekyll-gist
 permalink: /:year/:month/:title.html
+
+repository: Ecliptic-Innovations/Ecliptic-Web
