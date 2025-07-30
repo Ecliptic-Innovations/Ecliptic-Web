@@ -3,7 +3,7 @@ layout: base
 ---
 {% if page.cover %}
 <div class="row">
-{% img page.cover cover %}
+<img src="{{ page.cover | prepend: site.baseurl }}" alt="Cover image" class="responsive-img">
 </div>
 {% endif %}
 <div class="row">
