@@ -1,9 +1,15 @@
 ---
 layout: base
+title: Categories
 ---
 <div class="row">
-    {% for keypair in site.categories %}
-    {% assign category = keypair | first%}
-    <a href="{{ category | prepend: '/categories/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ category }}</div></a>
+    <h2>Categories</h2>
+    {% for category in site.categories %}
+        <h3>{{ category[0] }}</h3>
+        <ul>
+        {% for post in category[1] %}
+            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%m/%d/%Y" }}</li>
+        {% endfor %}
+        </ul>
     {% endfor %}
 </div>

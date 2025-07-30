@@ -1,11 +1,17 @@
 ---
 layout: base
+title: Tags
 ---
 <div class="row">
-{% for keypair in site.tags %}
-{% assign tag = keypair | first%}
-{% if tag != site.sticky %}
-<a href="{{ tag | prepend: '/tags/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ tag }}</div></a>
-{% endif %}
-{% endfor %}
+    <h2>Tags</h2>
+    {% for tag in site.tags %}
+        {% if tag[0] != site.sticky %}
+        <h3>{{ tag[0] }}</h3>
+        <ul>
+        {% for post in tag[1] %}
+            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%m/%d/%Y" }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endfor %}
 </div>
