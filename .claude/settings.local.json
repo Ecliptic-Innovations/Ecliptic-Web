@@ -10,7 +10,10 @@
       "Bash(git push:*)",
       "WebFetch(domain:ecliptic-innovations.github.io)",
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(jekyll build)",
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(ridk install:*)"
     ],
     "deny": []
   }
