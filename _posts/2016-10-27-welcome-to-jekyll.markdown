@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Welcome to Jekyll!
+title:  Welcome to Ecliptic Innovations
 categories: 
     - jekyll update
 tags: 
